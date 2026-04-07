@@ -46,4 +46,19 @@ class FrasesRepository{
         }
     }
     
+    func fetchPhrases() -> [Frases] {
+        let descriptor = FetchDescriptor<Frases>()
+        return (try? context.fetch(descriptor)) ?? []
+    }
+    
+    func insertIfEmpty() -> Bool{
+        var descriptor = FetchDescriptor<Frases>()
+        descriptor.fetchLimit = 1
+        
+        if let result = try? context.fetch(descriptor), result.isEmpty {
+            return true
+        }else{
+            return false
+        }
+    }
 }
