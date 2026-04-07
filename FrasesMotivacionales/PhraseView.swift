@@ -4,7 +4,6 @@
 //
 //  Created by Manuel Alejandro Hernandez Marín on 07/04/26.
 //
-
 import Foundation
 import SwiftUI
 
@@ -21,6 +20,17 @@ struct PhraseView : View {
             
              
             VStack {
+                
+                HStack(){
+                    Image(systemName: "square.stack.3d.down.forward.fill")
+                        .font(.system(size: 24))
+                        .foregroundStyle(.black.opacity(0.8))
+                        .padding(.horizontal, 16)
+                        .padding(.top,24)
+                    Spacer()
+                }
+                
+                Spacer()
                 HStack {
                     VStack(alignment: .leading) {
                         Text("Viernes, 09")
@@ -40,7 +50,7 @@ struct PhraseView : View {
                             .foregroundStyle(.white)
                     }
                     .padding()
-                    .padding(.vertical, 32) 
+                    .padding(.vertical, 32)
                 }
                 .background(
                     LinearGradient(colors: [
@@ -84,6 +94,8 @@ struct PhraseView : View {
                     .clipShape(Circle())
                 }
                 .padding(.top, 24)
+                
+                Spacer()
                 
             }
             .padding(.horizontal, 24)
