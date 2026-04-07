@@ -1,20 +1,13 @@
-//
-//  PhrasesWidget.swift
-//  PhrasesWidget
-//
-//  Created by Edgar Calderón on 07/04/26.
-//
-
 import WidgetKit
 import SwiftUI
 
 struct Provider: AppIntentTimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), configuration: ConfigurationAppIntent())
+        SimpleEntry(date: Date(), phrase: "Frase motivacional")
     }
 
     func snapshot(for configuration: ConfigurationAppIntent, in context: Context) async -> SimpleEntry {
-        SimpleEntry(date: Date(), configuration: configuration)
+        SimpleEntry(date: Date(), phrase: loadRandomPhrase())
     }
     
     func timeline(for configuration: ConfigurationAppIntent, in context: Context) async -> Timeline<SimpleEntry> {
@@ -24,21 +17,27 @@ struct Provider: AppIntentTimelineProvider {
         let currentDate = Date()
         for hourOffset in 0 ..< 5 {
             let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, configuration: configuration)
+            let entry = SimpleEntry(date: entryDate, phrase: loadRandomPhrase())
             entries.append(entry)
         }
 
         return Timeline(entries: entries, policy: .atEnd)
     }
 
-//    func relevances() async -> WidgetRelevances<ConfigurationAppIntent> {
-//        // Generate a list containing the contexts this widget is relevant in.
-//    }
+    private func loadRandomPhrase() -> String {
+        guard let url = Bundle.main.url(forResource: "phrases", withExtension: "json"),
+              let data = try? Data(contentsOf: url),
+              let phrases = try? JSONDecoder().decode([FrasesModel].self, from: data),
+              let random = phrases.randomElement() else {
+            return "Hoy es un buen día para empezar."
+        }
+        return random.text
+    }
 }
 
 struct SimpleEntry: TimelineEntry {
     let date: Date
-    let configuration: ConfigurationAppIntent
+    let phrase: String
 }
 
 struct PhrasesWidgetEntryView : View {
@@ -49,7 +48,7 @@ struct PhrasesWidgetEntryView : View {
             Text("Frase del día:")
                 .font(.body)
                 .foregroundStyle(.white)
-            Text(entry.configuration.phrase)
+            Text(entry.phrase)
                 .foregroundStyle(.white)
                 .font(.title)
                 .fontWeight(.semibold)
@@ -60,10 +59,17 @@ struct PhrasesWidgetEntryView : View {
                 .init(0, 0.5), .init(0.6, 0.4), .init(1, 0.5),
                 .init(0, 1), .init(0.5, 1), .init(1, 1)
             ], colors: [
-                .purple, .blue, .cyan,
-                .pink, .indigo, .teal,
-                .orange, .pink, .purple
+                Color(.sRGB, red: 0.9569, green: 0.9412, blue: 0.9255),
+                Color(.sRGB, red: 0.7686, green: 0.7216, blue: 0.9098),
+                Color(.sRGB, red: 0.5451, green: 0.4902, blue: 0.7490),
+                Color(.sRGB, red: 0.9490, green: 0.8667, blue: 0.9098),
+                Color(.sRGB, red: 0.8627, green: 0.8118, blue: 0.7216),
+                Color(.sRGB, red: 0.6078, green: 0.6588, blue: 0.7686),
+                Color(.sRGB, red: 0.9098, green: 0.8667, blue: 0.8157),
+                Color(.sRGB, red: 0.7216, green: 0.6588, blue: 0.8471),
+                Color(.sRGB, red: 0.4784, green: 0.5451, blue: 0.6863)
             ], smoothsColors: true)
+            .overlay(Color.black.opacity(0.08))
         }
     }
 }
@@ -81,23 +87,18 @@ struct PhrasesWidget: Widget {
     }
 }
 
-extension ConfigurationAppIntent {
-    fileprivate static var smiley: ConfigurationAppIntent {
-        let intent = ConfigurationAppIntent()
-        intent.phrase = "Hola"
-        return intent
-    }
-    
-    fileprivate static var starEyes: ConfigurationAppIntent {
-        let intent = ConfigurationAppIntent()
-        intent.phrase = "Hola desde el espacio"
-        return intent
+struct FrasesModel: Decodable {
+    var id:Int
+    var text:String
+    enum CodingKeys: String, CodingKey {
+        case id
+        case text
     }
 }
 
 #Preview(as: .systemSmall) {
     PhrasesWidget()
 } timeline: {
-    SimpleEntry(date: .now, configuration: .smiley)
-    SimpleEntry(date: .now, configuration: .starEyes)
+    SimpleEntry(date: .now, phrase: "Frase Motivacional")
+    SimpleEntry(date: .now, phrase: "2da Frase Motivacional")
 }
