@@ -1,6 +1,6 @@
 import Foundation
 
-struct FrasesModel{
+struct FrasesModel: Decodable{
     var id:Int
     var text:String
     var lang:String
