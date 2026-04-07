@@ -29,8 +29,8 @@ class FrasesRepository{
             let newFrace = Frases(
                 id: frase.id,
                 text: frase.text,
-                categoryId: categoryDict[frase.id],
-                authorId: autorDict[frase.id]
+                categoryId: categoryDict[frase.categoryId],
+                authorId: autorDict[frase.authorId ?? 0]
             )
             context.insert(newFrace)
         }
