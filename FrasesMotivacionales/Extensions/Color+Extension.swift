@@ -87,8 +87,36 @@ struct ColorPalette {
         "#EF233C", // Rojo brillante
     ]
     
+    static let darks: [String] = [
+        "#1A1A2E", // Azul marino profundo
+        "#16213E", // Navy oscuro
+        "#0F3460", // Azul real oscuro
+        "#1B1B2F", // Índigo oscuro
+        "#2C2C54", // Púrpura profundo
+        "#1A1A1A", // Casi negro
+        "#2D132C", // Vino oscuro
+        "#1C3A4A", // Teal oscuro
+        "#2E4057", // Slate azul
+        "#1B4332", // Verde bosque
+        "#3B1F2B", // Marrón rojizo oscuro
+        "#2C3E50", // Gris azulado
+        "#1A2634", // Azul acero oscuro
+        "#3D2B1F", // Café oscuro
+        "#2B2D42", // Gris azul profundo
+        "#1F2041", // Azul medianoche
+        "#3C1642", // Morado oscuro
+        "#0D1B2A", // Azul noche
+        "#1E3231", // Verde pizarra
+        "#2A1A2E", // Berenjena oscura
+    ]
+    
     static var randomPastel: String {
         pastels.randomElement()!
+    }
+    
+    
+    static var randomDark: String {
+        darks.randomElement()!
     }
     
     static var randomVivid: String {

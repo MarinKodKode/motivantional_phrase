@@ -25,7 +25,7 @@ struct PhraseView : View {
                     VStack(alignment: .leading) {
                         Text("Viernes, 09")
                             .font(.system(size: 20, weight: .bold))
-                            .foregroundStyle(.black.opacity(0.7)) 
+                            .foregroundStyle(.white.opacity(0.7))
                          
                         Text("Lo imposible solo cuesta un poco más")
                             .font(.system(size: 28, weight: .bold))
@@ -34,22 +34,23 @@ struct PhraseView : View {
                             .foregroundStyle(.white)
                         
                         Text("Autor desconocido")
-                            .font(.system(size: 18, weight: .thin))
+                            .font(.system(size: 18, weight: .regular))
                             .padding(.trailing, 40)
                             .padding(.top, 30)
                             .foregroundStyle(.white)
                     }
                     .padding()
-                    .padding(.vertical, 32)
+                    .padding(.vertical, 32) 
                 }
                 .background(
                     LinearGradient(colors: [
-                        Color(hex: ColorPalette.randomVivid),
-                        Color(hex: ColorPalette.randomVivid).opacity(0.9)],
+                        Color(hex: ColorPalette.randomDark),
+                        Color(hex: ColorPalette.randomDark).opacity(0.9)],
                                    startPoint: .top,
                                    endPoint: .bottom)
                 )
                 .clipShape(RoundedRectangle(cornerRadius: 16))
+                .shadow(radius: 6.9)
                 
                 HStack {
                     
