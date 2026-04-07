@@ -291,21 +291,21 @@
     "text": "Cada uno es como Dios le hizo y aun peor muchas veces.",
     "lang": "es",
     "author_id": 12,
-    "categoria": "reflexion",
+    "category_id": 3,
   },
   {
     "id": 51,
     "text": "Cuando la cólera sale de madre no tiene la lengua freno que la corrija.",
     "lang": "es",
     "author_id": 12,
-    "category_id": "reflexion",
+    "category_id": 3,
   },
   {
     "id": 52,
     "text": "Cuando la zorra predica, no están seguros los pollos.",
     "lang": "es",
     "author_id": 12,
-    "category_id": "reflexion",
+    "category_id": 3,
   },
   {
     "id": 53,
@@ -318,7 +318,7 @@
     "id": 54,
     "text": "De altos espíritus es aspirar a cosas altas.",
     "lang": "es",
-    "author_id": "Miguel de Cervantes",
-    "category_id": "motivacional",
+    "author_id": 12,
+    "category_id": 3,
    }
 ]
