@@ -1,6 +1,6 @@
 import Foundation
 
-struct AutorModel: Decodable{
+struct AutorModel{
     var id:Int
     var name:String
 }

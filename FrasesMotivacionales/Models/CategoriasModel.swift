@@ -1,6 +1,6 @@
 import Foundation
 
-struct CategoriasModel: Decodable{
+struct CategoriasModel{
     var id:Int
     var name:String
 }
