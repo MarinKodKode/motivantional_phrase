@@ -14,8 +14,7 @@ struct FrasesMotivacionalesApp: App {
         let schema = Schema([
             Frases.self,
             Categoria.self,
-            Autor.self,
-            FrasesFavoritas.self,
+            Autor.self
         ])
         let modelConfiguration = ModelConfiguration(
             schema: schema,
