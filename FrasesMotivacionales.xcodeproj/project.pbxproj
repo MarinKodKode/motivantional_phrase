@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E881CC042F86C6710009427A /* SwipeableQuoteViewDes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E881CC032F86C6710009427A /* SwipeableQuoteViewDes.swift */; };
 		E8B6522B2F857C0D00313333 /* PhraseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B6522A2F857C0D00313333 /* PhraseView.swift */; };
 		E8B6522E2F857C3A00313333 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B6522D2F857C3A00313333 /* Color.swift */; };
 		E8B652302F85825100313333 /* PhraseViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B6522F2F85825100313333 /* PhraseViewViewModel.swift */; };
@@ -46,6 +47,7 @@
 		E86622992F84230A0005E5AF /* FrasesMotivacionales.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrasesMotivacionales.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E86622A82F84230B0005E5AF /* FrasesMotivacionalesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrasesMotivacionalesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E86622B22F84230B0005E5AF /* FrasesMotivacionalesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrasesMotivacionalesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E881CC032F86C6710009427A /* SwipeableQuoteViewDes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableQuoteViewDes.swift; sourceTree = "<group>"; };
 		E8B6522A2F857C0D00313333 /* PhraseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseView.swift; sourceTree = "<group>"; };
 		E8B6522D2F857C3A00313333 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		E8B6522F2F85825100313333 /* PhraseViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseViewViewModel.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				E96B35672F8573F5000266D3 /* Item.swift */,
 				E8B6522A2F857C0D00313333 /* PhraseView.swift */,
 				E8B6522F2F85825100313333 /* PhraseViewViewModel.swift */,
+				E881CC032F86C6710009427A /* SwipeableQuoteViewDes.swift */,
 			);
 			path = FrasesMotivacionales;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 				E8B6522B2F857C0D00313333 /* PhraseView.swift in Sources */,
 				E96B357D2F857765000266D3 /* FrasesFavoritasModel.swift in Sources */,
 				E96B35712F85743D000266D3 /* Categoria.swift in Sources */,
+				E881CC042F86C6710009427A /* SwipeableQuoteViewDes.swift in Sources */,
 				E96B357B2F857751000266D3 /* FrasesModel.swift in Sources */,
 				E8B6522E2F857C3A00313333 /* Color.swift in Sources */,
 				E96B356B2F8573F5000266D3 /* FrasesMotivacionalesApp.swift in Sources */,
