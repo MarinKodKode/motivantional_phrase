@@ -20,10 +20,8 @@
 		E96B35712F85743D000266D3 /* Categoria.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96B35702F85743D000266D3 /* Categoria.swift */; };
 		E96B35732F857449000266D3 /* Autor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96B35722F857449000266D3 /* Autor.swift */; };
 		E96B35752F85744B000266D3 /* Frases.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96B35742F85744B000266D3 /* Frases.swift */; };
-		E96B35772F857459000266D3 /* FrasesFavoritas.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96B35762F857459000266D3 /* FrasesFavoritas.swift */; };
 		E96B35792F8576B1000266D3 /* FrasesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96B35782F8576B1000266D3 /* FrasesRepository.swift */; };
 		E96B357B2F857751000266D3 /* FrasesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96B357A2F857751000266D3 /* FrasesModel.swift */; };
-		E96B357D2F857765000266D3 /* FrasesFavoritasModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96B357C2F857765000266D3 /* FrasesFavoritasModel.swift */; };
 		E96B357F2F85776A000266D3 /* CategoriasModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96B357E2F85776A000266D3 /* CategoriasModel.swift */; };
 		E96B35812F85776B000266D3 /* AutorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96B35802F85776B000266D3 /* AutorModel.swift */; };
 /* End PBXBuildFile section */
@@ -62,10 +60,8 @@
 		E96B35702F85743D000266D3 /* Categoria.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categoria.swift; sourceTree = "<group>"; };
 		E96B35722F857449000266D3 /* Autor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Autor.swift; sourceTree = "<group>"; };
 		E96B35742F85744B000266D3 /* Frases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Frases.swift; sourceTree = "<group>"; };
-		E96B35762F857459000266D3 /* FrasesFavoritas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrasesFavoritas.swift; sourceTree = "<group>"; };
 		E96B35782F8576B1000266D3 /* FrasesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrasesRepository.swift; sourceTree = "<group>"; };
 		E96B357A2F857751000266D3 /* FrasesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrasesModel.swift; sourceTree = "<group>"; };
-		E96B357C2F857765000266D3 /* FrasesFavoritasModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrasesFavoritasModel.swift; sourceTree = "<group>"; };
 		E96B357E2F85776A000266D3 /* CategoriasModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriasModel.swift; sourceTree = "<group>"; };
 		E96B35802F85776B000266D3 /* AutorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutorModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -186,7 +182,6 @@
 				E96B35702F85743D000266D3 /* Categoria.swift */,
 				E96B35722F857449000266D3 /* Autor.swift */,
 				E96B35742F85744B000266D3 /* Frases.swift */,
-				E96B35762F857459000266D3 /* FrasesFavoritas.swift */,
 			);
 			path = Entitys;
 			sourceTree = "<group>";
@@ -195,7 +190,6 @@
 			isa = PBXGroup;
 			children = (
 				E96B357A2F857751000266D3 /* FrasesModel.swift */,
-				E96B357C2F857765000266D3 /* FrasesFavoritasModel.swift */,
 				E96B357E2F85776A000266D3 /* CategoriasModel.swift */,
 				E96B35802F85776B000266D3 /* AutorModel.swift */,
 			);
@@ -349,13 +343,11 @@
 			files = (
 				E96B356A2F8573F5000266D3 /* ContentView.swift in Sources */,
 				E8B6522B2F857C0D00313333 /* PhraseView.swift in Sources */,
-				E96B357D2F857765000266D3 /* FrasesFavoritasModel.swift in Sources */,
 				E96B35712F85743D000266D3 /* Categoria.swift in Sources */,
 				1ED1B5642F8582BF002C87AC /* JSONLoader.swift in Sources */,
 				E96B357B2F857751000266D3 /* FrasesModel.swift in Sources */,
 				E8B6522E2F857C3A00313333 /* Color.swift in Sources */,
 				E96B356B2F8573F5000266D3 /* FrasesMotivacionalesApp.swift in Sources */,
-				E96B35772F857459000266D3 /* FrasesFavoritas.swift in Sources */,
 				E96B35732F857449000266D3 /* Autor.swift in Sources */,
 				E96B35792F8576B1000266D3 /* FrasesRepository.swift in Sources */,
 				E96B357F2F85776A000266D3 /* CategoriasModel.swift in Sources */,
