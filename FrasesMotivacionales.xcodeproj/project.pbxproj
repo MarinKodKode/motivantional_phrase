@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		E881CC042F86C6710009427A /* SwipeableQuoteViewDes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E881CC032F86C6710009427A /* SwipeableQuoteViewDes.swift */; };
+		1ED1B55D2F858245002C87AC /* phrases.json in Resources */ = {isa = PBXBuildFile; fileRef = 1ED1B55C2F85823C002C87AC /* phrases.json */; };
+		1ED1B55F2F858250002C87AC /* autors.json in Resources */ = {isa = PBXBuildFile; fileRef = 1ED1B55E2F858249002C87AC /* autors.json */; };
+		1ED1B5612F85825B002C87AC /* categories.json in Resources */ = {isa = PBXBuildFile; fileRef = 1ED1B5602F858253002C87AC /* categories.json */; };
+		1ED1B5642F8582BF002C87AC /* JSONLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED1B5632F8582B3002C87AC /* JSONLoader.swift */; };
 		E8B6522B2F857C0D00313333 /* PhraseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B6522A2F857C0D00313333 /* PhraseView.swift */; };
 		E8B6522E2F857C3A00313333 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B6522D2F857C3A00313333 /* Color.swift */; };
 		E8B652302F85825100313333 /* PhraseViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B6522F2F85825100313333 /* PhraseViewViewModel.swift */; };
@@ -44,6 +48,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1ED1B55C2F85823C002C87AC /* phrases.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = phrases.json; sourceTree = "<group>"; };
+		1ED1B55E2F858249002C87AC /* autors.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = autors.json; sourceTree = "<group>"; };
+		1ED1B5602F858253002C87AC /* categories.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = categories.json; sourceTree = "<group>"; };
+		1ED1B5632F8582B3002C87AC /* JSONLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONLoader.swift; sourceTree = "<group>"; };
 		E86622992F84230A0005E5AF /* FrasesMotivacionales.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrasesMotivacionales.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E86622A82F84230B0005E5AF /* FrasesMotivacionalesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrasesMotivacionalesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E86622B22F84230B0005E5AF /* FrasesMotivacionalesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrasesMotivacionalesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,6 +112,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1ED1B55B2F858232002C87AC /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				1ED1B5602F858253002C87AC /* categories.json */,
+				1ED1B55E2F858249002C87AC /* autors.json */,
+				1ED1B55C2F85823C002C87AC /* phrases.json */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		1ED1B5622F85829A002C87AC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1ED1B5632F8582B3002C87AC /* JSONLoader.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		E86622902F84230A0005E5AF = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +162,8 @@
 			isa = PBXGroup;
 			children = (
 				E8B6522C2F857C2000313333 /* Extension */,
+				1ED1B5622F85829A002C87AC /* Utils */,
+				1ED1B55B2F858232002C87AC /* Resource */,
 				E96B356F2F857422000266D3 /* Models */,
 				E96B356E2F857408000266D3 /* Entitys */,
 				E96B356D2F8573F7000266D3 /* Repository */,
@@ -297,7 +325,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ED1B55D2F858245002C87AC /* phrases.json in Resources */,
+				1ED1B5612F85825B002C87AC /* categories.json in Resources */,
 				E96B35692F8573F5000266D3 /* Assets.xcassets in Resources */,
+				1ED1B55F2F858250002C87AC /* autors.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +358,7 @@
 				E96B357D2F857765000266D3 /* FrasesFavoritasModel.swift in Sources */,
 				E96B35712F85743D000266D3 /* Categoria.swift in Sources */,
 				E881CC042F86C6710009427A /* SwipeableQuoteViewDes.swift in Sources */,
+				1ED1B5642F8582BF002C87AC /* JSONLoader.swift in Sources */,
 				E96B357B2F857751000266D3 /* FrasesModel.swift in Sources */,
 				E8B6522E2F857C3A00313333 /* Color.swift in Sources */,
 				E96B356B2F8573F5000266D3 /* FrasesMotivacionalesApp.swift in Sources */,
