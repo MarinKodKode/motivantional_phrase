@@ -11,6 +11,7 @@
 		1ED1B55F2F858250002C87AC /* autors.json in Resources */ = {isa = PBXBuildFile; fileRef = 1ED1B55E2F858249002C87AC /* autors.json */; };
 		1ED1B5612F85825B002C87AC /* categories.json in Resources */ = {isa = PBXBuildFile; fileRef = 1ED1B5602F858253002C87AC /* categories.json */; };
 		1ED1B5642F8582BF002C87AC /* JSONLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED1B5632F8582B3002C87AC /* JSONLoader.swift */; };
+		C3DF3A132F875EA800138E45 /* ShareHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DF3A122F875E9F00138E45 /* ShareHelper.swift */; };
 		E861AAAC2F8730070095BBF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E861AAAB2F8730070095BBF2 /* LaunchScreen.storyboard */; };
 		E861AAAD2F8730070095BBF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E861AAAB2F8730070095BBF2 /* LaunchScreen.storyboard */; };
 		E881CC042F86C6710009427A /* SwipeableQuoteViewDes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E881CC032F86C6710009427A /* SwipeableQuoteViewDes.swift */; };
@@ -52,6 +53,7 @@
 		1ED1B55E2F858249002C87AC /* autors.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = autors.json; sourceTree = "<group>"; };
 		1ED1B5602F858253002C87AC /* categories.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = categories.json; sourceTree = "<group>"; };
 		1ED1B5632F8582B3002C87AC /* JSONLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONLoader.swift; sourceTree = "<group>"; };
+		C3DF3A122F875E9F00138E45 /* ShareHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareHelper.swift; sourceTree = "<group>"; };
 		E861AAAB2F8730070095BBF2 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E86622992F84230A0005E5AF /* FrasesMotivacionales.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrasesMotivacionales.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E86622A82F84230B0005E5AF /* FrasesMotivacionalesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrasesMotivacionalesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				1ED1B5632F8582B3002C87AC /* JSONLoader.swift */,
+				C3DF3A122F875E9F00138E45 /* ShareHelper.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				E8B6522E2F857C3A00313333 /* Color.swift in Sources */,
 				E96B356B2F8573F5000266D3 /* FrasesMotivacionalesApp.swift in Sources */,
 				E96B35732F857449000266D3 /* Autor.swift in Sources */,
+				C3DF3A132F875EA800138E45 /* ShareHelper.swift in Sources */,
 				E96B35792F8576B1000266D3 /* FrasesRepository.swift in Sources */,
 				E96B357F2F85776A000266D3 /* CategoriasModel.swift in Sources */,
 				E96B356C2F8573F5000266D3 /* Item.swift in Sources */,
