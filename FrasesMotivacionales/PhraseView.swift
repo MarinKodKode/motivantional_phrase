@@ -37,7 +37,11 @@ struct PhraseView : View {
                 
                 HStack {
                     
-                    Button(action : {}) {
+                    Button(action: {
+                        let image = takeScreenshot()
+                
+                        shareImage(image)
+                    }) {
                         Image(systemName: "square.and.arrow.up.fill")
                             .fontWeight(.bold)
                             .foregroundStyle(.white)
