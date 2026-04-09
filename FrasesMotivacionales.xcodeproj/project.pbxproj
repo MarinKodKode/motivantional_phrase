@@ -11,8 +11,12 @@
 		1ED1B55F2F858250002C87AC /* autors.json in Resources */ = {isa = PBXBuildFile; fileRef = 1ED1B55E2F858249002C87AC /* autors.json */; };
 		1ED1B5612F85825B002C87AC /* categories.json in Resources */ = {isa = PBXBuildFile; fileRef = 1ED1B5602F858253002C87AC /* categories.json */; };
 		1ED1B5642F8582BF002C87AC /* JSONLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED1B5632F8582B3002C87AC /* JSONLoader.swift */; };
+		E861AAAC2F8730070095BBF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E861AAAB2F8730070095BBF2 /* LaunchScreen.storyboard */; };
+		E861AAAD2F8730070095BBF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E861AAAB2F8730070095BBF2 /* LaunchScreen.storyboard */; };
+		E881CC042F86C6710009427A /* SwipeableQuoteViewDes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E881CC032F86C6710009427A /* SwipeableQuoteViewDes.swift */; };
 		E8B6522B2F857C0D00313333 /* PhraseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B6522A2F857C0D00313333 /* PhraseView.swift */; };
 		E8B6522E2F857C3A00313333 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B6522D2F857C3A00313333 /* Color.swift */; };
+		E8B652302F85825100313333 /* PhraseViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B6522F2F85825100313333 /* PhraseViewViewModel.swift */; };
 		E96B35692F8573F5000266D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E96B35642F8573F5000266D3 /* Assets.xcassets */; };
 		E96B356A2F8573F5000266D3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96B35652F8573F5000266D3 /* ContentView.swift */; };
 		E96B356B2F8573F5000266D3 /* FrasesMotivacionalesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96B35662F8573F5000266D3 /* FrasesMotivacionalesApp.swift */; };
@@ -48,11 +52,14 @@
 		1ED1B55E2F858249002C87AC /* autors.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = autors.json; sourceTree = "<group>"; };
 		1ED1B5602F858253002C87AC /* categories.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = categories.json; sourceTree = "<group>"; };
 		1ED1B5632F8582B3002C87AC /* JSONLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONLoader.swift; sourceTree = "<group>"; };
+		E861AAAB2F8730070095BBF2 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E86622992F84230A0005E5AF /* FrasesMotivacionales.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrasesMotivacionales.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E86622A82F84230B0005E5AF /* FrasesMotivacionalesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrasesMotivacionalesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E86622B22F84230B0005E5AF /* FrasesMotivacionalesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrasesMotivacionalesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E881CC032F86C6710009427A /* SwipeableQuoteViewDes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableQuoteViewDes.swift; sourceTree = "<group>"; };
 		E8B6522A2F857C0D00313333 /* PhraseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseView.swift; sourceTree = "<group>"; };
 		E8B6522D2F857C3A00313333 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		E8B6522F2F85825100313333 /* PhraseViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseViewViewModel.swift; sourceTree = "<group>"; };
 		E96B35642F8573F5000266D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E96B35652F8573F5000266D3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E96B35662F8573F5000266D3 /* FrasesMotivacionalesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrasesMotivacionalesApp.swift; sourceTree = "<group>"; };
@@ -125,6 +132,7 @@
 		E86622902F84230A0005E5AF = {
 			isa = PBXGroup;
 			children = (
+				E861AAAB2F8730070095BBF2 /* LaunchScreen.storyboard */,
 				E96B35682F8573F5000266D3 /* FrasesMotivacionales */,
 				E86622AB2F84230B0005E5AF /* FrasesMotivacionalesTests */,
 				E86622B52F84230B0005E5AF /* FrasesMotivacionalesUITests */,
@@ -164,6 +172,8 @@
 				E96B35662F8573F5000266D3 /* FrasesMotivacionalesApp.swift */,
 				E96B35672F8573F5000266D3 /* Item.swift */,
 				E8B6522A2F857C0D00313333 /* PhraseView.swift */,
+				E8B6522F2F85825100313333 /* PhraseViewViewModel.swift */,
+				E881CC032F86C6710009427A /* SwipeableQuoteViewDes.swift */,
 			);
 			path = FrasesMotivacionales;
 			sourceTree = "<group>";
@@ -316,6 +326,7 @@
 				1ED1B55D2F858245002C87AC /* phrases.json in Resources */,
 				1ED1B5612F85825B002C87AC /* categories.json in Resources */,
 				E96B35692F8573F5000266D3 /* Assets.xcassets in Resources */,
+				E861AAAD2F8730070095BBF2 /* LaunchScreen.storyboard in Resources */,
 				1ED1B55F2F858250002C87AC /* autors.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,6 +335,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E861AAAC2F8730070095BBF2 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +356,7 @@
 				E96B356A2F8573F5000266D3 /* ContentView.swift in Sources */,
 				E8B6522B2F857C0D00313333 /* PhraseView.swift in Sources */,
 				E96B35712F85743D000266D3 /* Categoria.swift in Sources */,
+				E881CC042F86C6710009427A /* SwipeableQuoteViewDes.swift in Sources */,
 				1ED1B5642F8582BF002C87AC /* JSONLoader.swift in Sources */,
 				E96B357B2F857751000266D3 /* FrasesModel.swift in Sources */,
 				E8B6522E2F857C3A00313333 /* Color.swift in Sources */,
@@ -352,6 +365,7 @@
 				E96B35792F8576B1000266D3 /* FrasesRepository.swift in Sources */,
 				E96B357F2F85776A000266D3 /* CategoriasModel.swift in Sources */,
 				E96B356C2F8573F5000266D3 /* Item.swift in Sources */,
+				E8B652302F85825100313333 /* PhraseViewViewModel.swift in Sources */,
 				E96B35752F85744B000266D3 /* Frases.swift in Sources */,
 				E96B35812F85776B000266D3 /* AutorModel.swift in Sources */,
 			);
@@ -513,6 +527,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L7RQ7B5F43;
@@ -521,6 +536,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -545,6 +561,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L7RQ7B5F43;
@@ -553,6 +570,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
