@@ -60,9 +60,9 @@ struct SwipeableQuoteViewDes: View {
             
             HStack {
                 Button(action: {
-//                    let image = takeScreenshot()
-//                    
-//                    shareImage(image)
+                    let image = takeScreenshot()
+                    
+                    shareImage(image)
                 }) {
                     Image(systemName: "square.and.arrow.up.fill")
                         .fontWeight(.bold)

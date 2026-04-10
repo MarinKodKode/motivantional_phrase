@@ -11,7 +11,7 @@ struct PhraseView : View {
     @Environment(\.modelContext)  var modelContext
     
     @ObservedObject  var vm : PhraseViewViewModel
-    
+    @State var cardsLoaded : Bool = false
     var body: some View {
         NavigationStack {
             ZStack {
@@ -38,11 +38,13 @@ struct PhraseView : View {
                     
                     Spacer()
                     
-                    SwipeableQuoteViewDes(
-                        vm: PhraseViewViewModel(context: modelContext)
-                    )
-                    
-                    
+                    if cardsLoaded {
+                        SwipeableQuoteViewDes(
+                            vm: PhraseViewViewModel(context: modelContext)
+                        )
+                    }else{
+                        ProgressView()
+                    }
                     
                     Spacer()
                     
@@ -51,6 +53,11 @@ struct PhraseView : View {
             }
             .onAppear {
                 vm.initPhrasesView()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2.0){
+                    withAnimation(.easeInOut(duration: 0.2)){
+                        cardsLoaded = true
+                    }
+                }
             }
         }
     }
