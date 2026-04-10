@@ -8,65 +8,51 @@ import Foundation
 import SwiftUI
 
 struct PhraseView : View {
+    @Environment(\.modelContext)  var modelContext
+    
+    @ObservedObject  var vm : PhraseViewViewModel
     
     var body: some View {
-        ZStack {
-            LinearGradient(colors: [
-                Color(hex: ColorPalette.randomPastel).opacity(0.1),
-                Color(hex: ColorPalette.randomVivid).opacity(0.2)],
-                           startPoint: .top,
-                           endPoint: .bottom)
-            .ignoresSafeArea()
-                         
-            VStack {
-                HStack(){
-                    Button (action : {} ){
-                        Image(systemName: "square.stack.3d.down.forward.fill")
-                            .font(.system(size: 24))
-                            .foregroundStyle(.black.opacity(0.8))
-                            .padding(.horizontal, 16)
-                            .padding(.top,24)
+        NavigationStack {
+            ZStack {
+                LinearGradient(colors: [
+                    Color(hex: ColorPalette.randomPastel).opacity(0.1),
+                    Color(hex: ColorPalette.randomVivid).opacity(0.2)],
+                               startPoint: .top,
+                               endPoint: .bottom)
+                .ignoresSafeArea()
+                
+                VStack {
+                    HStack(){
+                        NavigationLink{
+                            FavouritesView(vm: PhraseViewViewModel(context: modelContext))
+                        } label :{
+                            Image(systemName: "square.stack.3d.down.forward.fill")
+                                .font(.system(size: 24))
+                                .foregroundStyle(.primary.opacity(0.8))
+                                .padding(.horizontal, 16)
+                                .padding(.top,24)
+                        }
+                        Spacer()
                     }
+                    
                     Spacer()
-                }
-                
-                Spacer()
-                
-                SwipeableQuoteViewDes()
-
-                
-                HStack {
                     
-                    Button(action: {
-                        let image = takeScreenshot()
-                
-                        shareImage(image)
-                    }) {
-                        Image(systemName: "square.and.arrow.up.fill")
-                            .fontWeight(.bold)
-                            .foregroundStyle(.white)
-                            .padding()
-                    }
-                    .background(Color.gray.opacity(0.6))
-                    .clipShape(Circle())
+                    SwipeableQuoteViewDes(
+                        vm: PhraseViewViewModel(context: modelContext)
+                    )
                     
-                    Button(action : {}) {
-                        Image(systemName: "heart.fill")
-                            .fontWeight(.bold)
-                            .foregroundStyle(.white)
-                            .padding()
-                    }
-                    .background(Color.gray.opacity(0.6))
-                    .clipShape(Circle())
+                    
+                    
+                    Spacer()
+                    
                 }
-                .padding(.top, 24)
-                
-                Spacer()
-                
+                .padding(.horizontal, 24)
             }
-            .padding(.horizontal, 24)
+            .onAppear {
+                vm.initPhrasesView()
+            }
         }
-        
     }
 }
 
@@ -79,24 +65,24 @@ struct QuoteCard : Identifiable {
 }
 
 struct QuoteCardView: View {
-    let card: QuoteCard
+    let card: Frases
     
     var body: some View {
         
         HStack {
             VStack(alignment: .leading, spacing: 12) {
-                Text(card.date)
+                Text(card.categoryId?.name ?? "")
                     .font(.system(size: 16, weight: .bold))
                     .foregroundStyle(.white.opacity(0.7))
                 
-                Text(card.quote)
+                Text(card.text)
                     .font(.system(size: 24, weight: .bold))
                     .padding(.trailing, 40)
                     .padding(.top, 12)
                     .foregroundStyle(.white)
                 
                 
-                Text(card.author)
+                Text(card.authorId?.name ?? "Autor desconocido")
                     .font(.system(size: 16, weight: .regular))
                     .padding(.trailing, 40)
                     .padding(.top, 30)
@@ -126,6 +112,6 @@ extension Comparable {
 
 
 
-#Preview {
-    PhraseView()
-}
+//#Preview {
+//    PhraseView()
+//}
