@@ -34,13 +34,29 @@ struct PhraseView : View {
                                 .padding(.top,24)
                         }
                         Spacer()
+                        
+                        Menu {
+                            ForEach(vm.categorias){category in
+                                Button(category.name)    {
+                                    vm.fetchPhrasesByCategory(with: category.id)
+                                    print("Category")
+                                }
+                            }
+                        } label: {
+                            Image(systemName: "text.justify.trailing")
+                                .font(.system(size: 24))
+                                .foregroundStyle(.primary.opacity(0.8))
+                                .padding(.horizontal, 16)
+                                .padding(.top, 24)
+                        }
+                        
                     }
                     
                     Spacer()
                     
                     if cardsLoaded {
                         SwipeableQuoteViewDes(
-                            vm: PhraseViewViewModel(context: modelContext)
+                            vm: vm
                         )
                     }else{
                         ProgressView()

@@ -30,7 +30,7 @@ class FrasesRepository{
                 id: frase.id,
                 text: frase.text,
                 categoryId: categoryDict[frase.categoryId],
-                authorId: autorDict[frase.authorId ?? 0]
+                authorId: autorDict[frase.authorId ?? 0], favorite: false
             )
             context.insert(newFrace)
         }
@@ -38,6 +38,10 @@ class FrasesRepository{
     
     func addFavoritePhrases(fraseDTO:Frases,isFavorited:Bool){
         fraseDTO.favorite = isFavorited
+    }
+    
+    func removeFavoritePhrases(fraseDTO:Frases){
+        fraseDTO.favorite = false
     }
     
     func fetchPhrasesFavorites() -> Frases? {
@@ -65,6 +69,15 @@ class FrasesRepository{
         }
     }
     
+    func fetchPhrasesByRealCategory(idCategory:Int) -> [Frases]? {
+        let descriptor = FetchDescriptor<Frases>(predicate: #Predicate { $0.categoryId?.id == idCategory } )
+        do{
+            return try context.fetch(descriptor)
+        }catch{
+         return nil
+        }
+    }
+    
     func fetchCategorys() -> [Categoria] {
         let descriptor = FetchDescriptor<Categoria>()
         return (try? context.fetch(descriptor)) ?? []
@@ -73,7 +86,6 @@ class FrasesRepository{
     func fetchPhrases() -> [Frases] {
         let descriptor = FetchDescriptor<Frases>()
         let frases = (try? context.fetch(descriptor)) ?? []
-        print("My prafes = \(frases)")
         return frases
     }
     

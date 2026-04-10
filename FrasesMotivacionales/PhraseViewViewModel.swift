@@ -15,6 +15,7 @@ class PhraseViewViewModel : ObservableObject {
         
     var fraseActual: Frases?
     var categorias: [Categoria] = []
+    var phrasesCategory: [Frases] = []
     
     @Published var phrases : [Frases] = []
     @Published var favouritePhrases : [Frases] = []
@@ -27,6 +28,7 @@ class PhraseViewViewModel : ObservableObject {
     
     func initPhrasesView() {
         getPhrasesFromRepo()
+        fetchCategorias()
     }
     
     func initFavouritesView() {
@@ -43,5 +45,17 @@ class PhraseViewViewModel : ObservableObject {
     
     func onTapButton_AddPhraseToFavourites(_ phrase : Frases){
         self.repository.addFavoritePhrases(fraseDTO: phrase, isFavorited: true)
+    }
+    
+    func onTapButton_RemovePhraseToFavourites(_ phrase : Frases){
+        self.repository.removeFavoritePhrases(fraseDTO: phrase)
+    }
+
+    func fetchCategorias() {
+        self.categorias = self.repository.fetchCategorys()
+    }
+    func fetchPhrasesByCategory(with idCategory : Int) {
+        self.phrases = self.repository
+            .fetchPhrasesByRealCategory(idCategory: idCategory) ?? []
     }
 }
