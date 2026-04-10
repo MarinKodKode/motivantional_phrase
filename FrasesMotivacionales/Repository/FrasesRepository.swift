@@ -29,21 +29,60 @@ class FrasesRepository{
             let newFrace = Frases(
                 id: frase.id,
                 text: frase.text,
-                categoryId: categoryDict[frase.id],
-                authorId: autorDict[frase.id]
+                categoryId: categoryDict[frase.categoryId],
+                authorId: autorDict[frase.authorId ?? 0]
             )
             context.insert(newFrace)
         }
     }
     
-    func addFavoritePhrases(idFrase:Int){
-        let newFrase = FrasesFavoritas(idFrase: idFrase)
-        context.insert(newFrase)
+    func addFavoritePhrases(fraseDTO:Frases,isFavorited:Bool){
+        fraseDTO.favorite = isFavorited
+    }
+    
+    func fetchPhrasesFavorites() -> Frases? {
+        let descriptor = FetchDescriptor<Frases>(predicate: #Predicate { $0.favorite == true} )
+        return (try? context.fetch(descriptor).randomElement())
+    }
+    
+    func fetchPhraseRandom() -> Frases? {
+        let descriptor = FetchDescriptor<Frases>()
         do{
-            try? context.save()
-        }catch(let e){
-            print("Error addList: \(e.localizedDescription)")
+            let frase = try context.fetch(descriptor)
+            return frase.randomElement() ?? nil
+        }catch{
+         return nil
         }
     }
     
+    func fetchPhrasesByCategory(idCategory:Int) -> Frases? {
+        let descriptor = FetchDescriptor<Frases>(predicate: #Predicate { $0.categoryId?.id == idCategory } )
+        do{
+            let frase = try context.fetch(descriptor)
+            return frase.randomElement() ?? nil
+        }catch{
+         return nil
+        }
+    }
+    
+    func fetchCategorys() -> [Categoria] {
+        let descriptor = FetchDescriptor<Categoria>()
+        return (try? context.fetch(descriptor)) ?? []
+    }
+    
+    func fetchPhrases() -> [Frases] {
+        let descriptor = FetchDescriptor<Frases>()
+        return (try? context.fetch(descriptor)) ?? []
+    }
+    
+    func insertIfEmpty() -> Bool{
+        var descriptor = FetchDescriptor<Frases>()
+        descriptor.fetchLimit = 1
+        
+        if let result = try? context.fetch(descriptor), result.isEmpty {
+            return true
+        }else{
+            return false
+        }
+    }
 }
