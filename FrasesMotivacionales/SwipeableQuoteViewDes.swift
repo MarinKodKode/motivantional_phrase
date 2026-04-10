@@ -16,6 +16,7 @@ struct SwipeableQuoteViewDes: View {
     @State private var dragOffset: CGSize = .zero
     @State private var isDragging = false
     @ObservedObject  var vm : PhraseViewViewModel
+    @State private var heartScale: CGFloat = 1.0
     private let swipeThreshold: CGFloat = 120
     
     var body: some View {
@@ -72,13 +73,35 @@ struct SwipeableQuoteViewDes: View {
                 .background(Color.gray.opacity(0.6))
                 .clipShape(Circle())
                 
-                Button(action : {
-                    vm.onTapButton_AddPhraseToFavourites(vm.phrases[currentIndex])
+                Button(
+action: {
+                    if vm.phrases[currentIndex].favorite {
+                        vm
+                            .onTapButton_RemovePhraseToFavourites(
+                                vm.phrases[currentIndex]
+                            )
+                    }else{
+                        vm
+                            .onTapButton_AddPhraseToFavourites(
+                                vm.phrases[currentIndex])
+                    }
+                        
+                    withAnimation(.spring(response: 0.3, dampingFraction: 0.4)) {
+                        heartScale = 1.4
+                    }
+                    withAnimation(.spring(response: 0.3, dampingFraction: 0.6).delay(0.15)) {
+                        heartScale = 1.0
+                    }
                 }) {
                     Image(systemName: "heart.fill")
                         .fontWeight(.bold)
-                        .foregroundStyle(.white)
+                        .foregroundStyle(
+                            vm
+                                .phrases[currentIndex].favorite  ? .red
+                                .opacity(0.6) :  .white
+                        )
                         .padding()
+                        .scaleEffect(heartScale)
                 }
                 .background(Color.gray.opacity(0.6))
                 .clipShape(Circle())

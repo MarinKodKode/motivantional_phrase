@@ -7,9 +7,9 @@ class Frases{
     var text:String
     var categoryId:Categoria?
     var authorId:Autor?
-    var favorite:Bool?
+    var favorite:Bool
     
-    init(id: Int, text: String, categoryId: Categoria?, authorId: Autor?,favorite:Bool = false) {
+    init(id: Int, text: String, categoryId: Categoria?, authorId: Autor?,favorite:Bool) {
         self.id = id
         self.text = text
         self.categoryId = categoryId
