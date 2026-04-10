@@ -72,7 +72,9 @@ class FrasesRepository{
     
     func fetchPhrases() -> [Frases] {
         let descriptor = FetchDescriptor<Frases>()
-        return (try? context.fetch(descriptor)) ?? []
+        let frases = (try? context.fetch(descriptor)) ?? []
+        print("My prafes = \(frases)")
+        return frases
     }
     
     func getPhrasesFavorites() -> [Frases]? {
