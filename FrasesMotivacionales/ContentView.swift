@@ -15,7 +15,7 @@ struct ContentView: View {
     }
 
     var body: some View {
-        PhraseView()
+        PhraseView( vm: PhraseViewViewModel(context: modelContext))
             .task {
                 guard repo.insertIfEmpty() else {
                     return

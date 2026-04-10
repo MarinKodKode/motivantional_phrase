@@ -75,6 +75,11 @@ class FrasesRepository{
         return (try? context.fetch(descriptor)) ?? []
     }
     
+    func getPhrasesFavorites() -> [Frases]? {
+        let descriptor = FetchDescriptor<Frases>(predicate: #Predicate { $0.favorite == true} )
+        return (try? context.fetch(descriptor)) ?? []
+    }
+    
     func insertIfEmpty() -> Bool{
         var descriptor = FetchDescriptor<Frases>()
         descriptor.fetchLimit = 1
